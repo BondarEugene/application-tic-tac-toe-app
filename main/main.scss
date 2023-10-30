@@ -1,0 +1,155 @@
+// !Шрифты
+/*Fonts*/
+@import url("");
+
+// !Обнуление
+@import "./nullstyle";
+
+// !container
+@import "./container";
+
+/*Body of page*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+//прибиваем footer к низу страницы, запрещаем контенту заходить за пределы экрана
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 1 auto;
+}
+
+
+.content {
+
+    // .content__header
+
+    &__header {
+    }
+
+    // .content__sample
+
+    &__board {
+    }
+}
+.header {
+
+    // .header__container
+
+    &__container {
+    }
+
+    // .header__body
+
+    &__body {
+    }
+
+    // .header__logo
+
+    &__logo {
+    }
+
+    // .header__item
+
+    &__item {
+    }
+
+    // .header__title
+
+    &__title {
+    }
+
+    // .header__link
+
+    &__link {
+    }
+
+    // .header__list
+
+    &__list {
+    }
+}
+.content {
+
+    // .content__board
+
+    &__board {
+    }
+}
+
+/*Сделал шаблон, пока подбираю дизайн*/
+.board {
+    // .board__container
+
+    &__container {
+    }
+    
+    // .board__body
+    
+    &__body {
+        background-color: rgba($color: #b45a5a, $alpha: 0.8);
+        border-radius: 5%;
+        max-width: 680px;
+        height: 100%;
+        margin: 10px auto;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    // .board__row
+    
+    &__row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    // .board__item
+
+    &__items {
+        flex: 0 1 33.333%;
+        background-color: rgba($color: #17e73a, $alpha: 1.0);
+        max-width: 200px;
+        min-height: 200px;
+        margin: 10px;
+        border-radius: 10%;
+        box-shadow: 1px 1px 10px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.item {
+}
+
+
+
+
+/*----------------Footer-----------------------------------------------*/
+.footer {
+
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__body
+
+    &__body {
+        display: flex;
+        min-height: 20px;
+        margin: 0 10px;
+        background-color: black;
+    }
+}
+
+
+
