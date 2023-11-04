@@ -95,11 +95,20 @@ body {
   flex: 1 1 auto;
 }
 
+.header__title {
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+.header__title-content {
+  font-size: 34px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
 /*Сделал шаблон, пока подбираю дизайн*/
 .board__body {
   background-color: rgba(180, 90, 90, 0.8);
   border-radius: 5%;
-  max-width: 680px;
+  max-width: 550px;
   height: 100%;
   margin: 10px auto;
   font-size: 30px;
@@ -115,8 +124,8 @@ body {
 .board__items {
   flex: 0 1 33.333%;
   background-color: #17e73a;
-  max-width: 200px;
-  min-height: 200px;
+  max-width: 150px;
+  min-height: 150px;
   margin: 10px;
   border-radius: 10%;
   box-shadow: 1px 1px 10px black;
@@ -124,6 +133,38 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
+  font-size: 100px;
+}
+.board__info {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+.board__reset {
+  display: block;
+  text-align: center;
+}
+.board__reset-button {
+  font-size: 34px;
+  font-weight: 600;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 0 0 20px 0;
+}
+.board__reset-button:hover {
+  background-color: #bbbaba;
+}
+.board__winner {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 20px 0;
+  text-decoration: underline;
 }
 
 /*----------------Footer-----------------------------------------------*/
