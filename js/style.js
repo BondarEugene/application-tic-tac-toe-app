@@ -49,7 +49,7 @@ function clickCell() {
   currentPlayer = currentPlayer === players.x ? players.o : players.x;
   innerInfo.textContent = `${currentPlayer}, your move!`;
   if (checkGameOver()) {
-    return finishGame();
+    return finishGame(/*setTimeout(() => restartGame(), 1000)*/);
   }
 }
 //------------------------
