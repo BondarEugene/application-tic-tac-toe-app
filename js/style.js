@@ -1,7 +1,7 @@
 const cells = document.querySelectorAll(".board__items");
 const resetButton = document.querySelector(".board__reset-button");
 const innerInfo = document.querySelector(".board__info");
-const winner = document.querySelector(".board__winner");
+const winner = document.querySelector(".board__winner-content");
 
 const players = {
   x: "X",
@@ -70,12 +70,12 @@ function checkGameOver() {
   for (const line of winCombinations) {
     if (checkLine(line)) {
       const winnigPlayer = boardArray[line[0]];
-      winner.textContent = `${winnigPlayer} won !!! Well done.`;
+      winner.textContent = `${winnigPlayer} won ! Well done.`;
       return true;
     }
   }
   if (!boardArray.includes("")) {
-    winner.textContent = "Friendship won!!!!!";
+    winner.textContent = "Friendship won!";
     return true;
   }
 }

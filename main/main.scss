@@ -1,6 +1,6 @@
 // !Шрифты
 /*Fonts*/
-@import url("");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@500&family=Source+Code+Pro:ital,wght@1,600;1,900&family=Libre+Franklin:ital,wght@1,700&display=swap");
 
 // !Обнуление
 @import "./nullstyle";
@@ -10,7 +10,8 @@
 
 /*Body of page*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lato', sans-serif;
+    background: url('/img/images/board/bg_2.jpg') 0 0 / cover fixed;
 }
 //прибиваем footer к низу страницы, запрещаем контенту заходить за пределы экрана
 .wrapper {
@@ -46,6 +47,7 @@ body {
     // .header__body
 
     &__body {
+        margin: 10px 0;
     }
 
     // .header__logo
@@ -62,12 +64,15 @@ body {
 
     &__title {
         text-align: center;
-        margin: 10px 0 0 0;
+        margin: 0 auto;
+        max-width: 550px;
+        padding: 10px 0;
     }
     &__title-content {
-        font-size: 34px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Libre Franklin', sans-serif;
         font-weight: 700;
+        font-size: 44px;
+        color: #fff;
         
     }
 
@@ -92,20 +97,40 @@ body {
 /*Сделал шаблон, пока подбираю дизайн*/
 .board {
     // .board__container
-
+    margin: 0 10px;
     &__container {
     }
     
     // .board__body
     
     &__body {
-        background-color: rgba($color: #b45a5a, $alpha: 0.8);
+        background: url('/img/images/board/bg_1.jpg') center;
+        border: 2px solid rgba($color: #616060, $alpha: 0.6);
         border-radius: 5%;
         max-width: 550px;
         height: 100%;
-        margin: 10px auto;
-        font-size: 30px;
-        font-weight: 600;
+        margin: 0 auto;
+        color: #fff;
+        @media(max-width: 553px) {
+            &{
+                max-width: 450px;
+            }
+        }
+        @media(max-width: 425px) {
+            &{
+                max-width: 390px;
+            }
+        }
+        @media(max-width: 375px) {
+            &{
+                max-width: 330px;
+            }
+        }
+        @media(max-width: 320px) {
+            &{
+                max-width: 300px;
+            }
+        }
     }
     
     // .board__row
@@ -121,8 +146,12 @@ body {
     // .board__item
 
     &__items {
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 600;
+        font-size: 100px;
         flex: 0 1 33.333%;
-        background-color: rgba($color: #17e73a, $alpha: 1.0);
+        background: rgb(177,182,182);
+        background: linear-gradient(49deg, rgba(177,182,182,1) 0%, rgba(16,16,20,1) 100%);
         max-width: 150px;
         min-height: 150px;
         margin: 10px;
@@ -133,15 +162,43 @@ body {
         align-items: center;
         text-align: center;
         cursor: pointer;
-        font-size: 100px;
+        @media(max-width: 553px) {
+            &{
+                max-width: 120px;
+                min-height: 120px;
+                font-size: 80px;
+            }
+        }
+
+        @media(max-width: 425px) {
+            &{
+                max-width: 100px;
+                min-height: 100px;
+            }
+        }
+
+        @media(max-width: 375px) {
+            &{
+                max-width: 80px;
+                min-height: 80px;
+                font-size: 60px;
+            }
+        }
+        @media(max-width: 320px) {
+            &{
+                max-width: 70px;
+                min-height: 70px;
+                font-size: 40px;
+            }
+        }
     }
 
     &__info {
         text-align: center;
         font-size: 34px;
         font-weight: 600;
-        margin: 0 0 20px 0;
-
+        margin: 10px 0 20px 0;
+        color: #fff;
     }
 
     &__reset {
@@ -150,41 +207,51 @@ body {
     }
 
     &__reset-button {
+        font-family: 'Libre Franklin', sans-serif;
         font-size: 34px;
-        font-weight: 600;
+        font-weight: 700;
         background-color: #fff;
         border: 2px solid #000;
         border-radius: 50px;
         padding: 10px;
-        margin: 0 0 20px 0;
+        margin: 0 0 10px 0;
         &:hover {
-            background-color: #bbbaba;
+            background-color: #000;
+            color: #fff;
         }
     }
 
     &__winner {
+        max-width: 550px;
+        margin: 0 auto;
         text-align: center;
+        font-family: 'Libre Franklin', sans-serif;
         font-size: 45px;
-        font-weight: 600;
-        color: #000;
+        font-weight: 500;
+    }
+    
+    &__winner-content {
         margin: 0 0 20px 0;
-        text-decoration: underline;
+        padding: 10px 0;
+        color: #fff;  
     }
 }
+
+
 /*----------------Footer-----------------------------------------------*/
-.footer {
+// .footer {
 
-    // .footer__container
+//     // .footer__container
 
-    &__container {
-    }
+//     &__container {
+//     }
 
-    // .footer__body
+//     // .footer__body
 
-    &__body {
-        display: flex;
-        min-height: 20px;
-        margin: 0 10px;
-        background-color: black;
-    }
-}
+//     &__body {
+//         display: flex;
+//         min-height: 20px;
+//         margin: 0 10px;
+//         background-color: black;
+//     }
+// }
