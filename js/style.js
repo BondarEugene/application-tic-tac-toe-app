@@ -1,5 +1,6 @@
 const cells = document.querySelectorAll(".board__items");
 const resetButton = document.querySelector(".board__reset-button");
+const boardBody = document.querySelector(".board__body");
 const innerInfo = document.querySelector(".board__info");
 const winner = document.querySelector(".board__winner-content");
 
@@ -33,7 +34,9 @@ function startGame() {
   cells.forEach((board__items) => (board__items.textContent = ""));
   winner.textContent = "";
   currentPlayer = players.x;
+  boardBody.after(innerInfo);
   innerInfo.textContent = `${currentPlayer}, your move!`;
+  resetButton.remove();
 }
 
 function clickCell() {
@@ -54,6 +57,8 @@ function clickCell() {
 }
 //------------------------
 function checkLine(line) {
+  winner.after(resetButton);
+  resetButton.textContent = "New game";
   const [a, b, c] = line;
 
   const cellA = boardArray[a];
@@ -82,7 +87,10 @@ function checkGameOver() {
 
 function finishGame() {
   runGame = false;
-  innerInfo.textContent = "";
+  //innerInfo.textContent = "";
+  innerInfo.remove();
+  winner.after(resetButton);
+  resetButton.textContent = "New Game";
 }
 
 function restartGame() {
