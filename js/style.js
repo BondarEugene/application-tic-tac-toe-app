@@ -1,16 +1,16 @@
-const cells = document.querySelectorAll(".board__items");
-const resetButton = document.querySelector(".board__reset-button");
-const boardBody = document.querySelector(".board__body");
-const innerInfo = document.querySelector(".board__info");
-const winner = document.querySelector(".board__winner-content");
+const cells = document.querySelectorAll('.board__items');
+const resetButton = document.querySelector('.board__reset-button');
+const boardBody = document.querySelector('.board__body');
+const innerInfo = document.querySelector('.board__info');
+const winner = document.querySelector('.board__winner-content');
 
 const players = {
-  x: "X",
-  o: "O",
+  x: 'X',
+  o: 'O',
 };
-let currentPlayer = "";
+let currentPlayer = '';
 let runGame = false;
-let boardArray = Array(9).fill("");
+let boardArray = Array(9).fill('');
 const winCombinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -24,16 +24,16 @@ const winCombinations = [
 
 function listenersToElOnBoard() {
   cells.forEach((board__items) => {
-    board__items.addEventListener("click", clickCell);
+    board__items.addEventListener('click', clickCell);
   });
-  resetButton.addEventListener("click", restartGame);
+  resetButton.addEventListener('click', restartGame);
 }
 
 function startGame() {
   runGame = true;
-  cells.forEach((board__items) => (board__items.textContent = ""));
-  winner.textContent = "";
+  cells.forEach((board__items) => (board__items.textContent = ''));
   currentPlayer = players.x;
+  winner.textContent = '';
   boardBody.after(innerInfo);
   innerInfo.textContent = `${currentPlayer}, your move!`;
   resetButton.remove();
@@ -58,14 +58,14 @@ function clickCell() {
 //------------------------
 function checkLine(line) {
   winner.after(resetButton);
-  resetButton.textContent = "New game";
+  resetButton.textContent = 'New game';
   const [a, b, c] = line;
 
   const cellA = boardArray[a];
   const cellB = boardArray[b];
   const cellC = boardArray[c];
 
-  if ([cellA, cellB, cellC].includes("")) {
+  if ([cellA, cellB, cellC].includes('')) {
     return false;
   }
   return cellA === cellB && cellB === cellC;
@@ -75,27 +75,28 @@ function checkGameOver() {
   for (const line of winCombinations) {
     if (checkLine(line)) {
       const winnigPlayer = boardArray[line[0]];
+
       winner.textContent = `${winnigPlayer} won ! Well done.`;
       return true;
     }
   }
-  if (!boardArray.includes("")) {
-    winner.textContent = "Friendship won!";
+  if (!boardArray.includes('')) {
+    winner.textContent = 'Friendship won!';
     return true;
   }
 }
 
 function finishGame() {
   runGame = false;
-  //innerInfo.textContent = "";
   innerInfo.remove();
   winner.after(resetButton);
-  resetButton.textContent = "New Game";
+  winner.style.padding = '10px 0';
+  winner.style.color = 'white';
 }
 
 function restartGame() {
-  boardArray = Array(9).fill("");
+  boardArray = Array(9).fill('');
   startGame();
 }
 
-window.addEventListener("load", () => listenersToElOnBoard());
+window.addEventListener('load', () => listenersToElOnBoard());

@@ -1,17 +1,17 @@
 // !Шрифты
 /*Fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@500&family=Source+Code+Pro:ital,wght@1,600;1,900&family=Libre+Franklin:ital,wght@1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@500&family=Source+Code+Pro:ital,wght@1,600;1,900&family=Libre+Franklin:ital,wght@1,700&display=swap');
 
 // !Обнуление
-@import "./nullstyle";
+@import './nullstyle';
 
 // !container
-@import "./container";
+@import './container';
 
 /*Body of page*/
 body {
-    font-family: 'Lato', sans-serif;
-    background: url('/img/images/board/bg_2.jpg') 0 0 / cover fixed;
+  font-family: 'Lato', sans-serif;
+  background: url('/img/images/board/bg_2.jpg') 0 0 / cover fixed;
 }
 //прибиваем footer к низу страницы, запрещаем контенту заходить за пределы экрана
 .wrapper {
@@ -24,219 +24,216 @@ body {
   flex: 1 1 auto;
 }
 
-
 .content {
+  // .content__header
 
-    // .content__header
+  &__header {
+  }
 
-    &__header {
-    }
+  // .content__sample
 
-    // .content__sample
-
-    &__board {
-    }
+  &__board {
+  }
 }
 .header {
+  // .header__container
 
-    // .header__container
+  &__container {
+  }
 
-    &__container {
-    }
+  // .header__body
 
-    // .header__body
+  &__body {
+    margin: 10px 0;
+  }
 
-    &__body {
-        margin: 10px 0;
-    }
+  // .header__logo
 
-    // .header__logo
+  &__logo {
+  }
 
-    &__logo {
-    }
+  // .header__item
 
-    // .header__item
+  &__item {
+  }
 
-    &__item {
-    }
+  // .header__title
 
-    // .header__title
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 10px 0;
+  }
+  &__title-content {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    color: #fff;
+  }
 
-    &__title {
-        text-align: center;
-        margin: 0 auto;
-        max-width: 550px;
-        padding: 10px 0;
-    }
-    &__title-content {
-        font-family: 'Libre Franklin', sans-serif;
-        font-weight: 700;
-        font-size: 44px;
-        color: #fff;
-        
-    }
+  // .header__link
 
-    // .header__link
+  &__link {
+  }
 
-    &__link {
-    }
+  // .header__list
 
-    // .header__list
-
-    &__list {
-    }
+  &__list {
+  }
 }
 .content {
+  // .content__board
 
-    // .content__board
-
-    &__board {
-    }
+  &__board {
+  }
 }
 
 /*Сделал шаблон, пока подбираю дизайн*/
 .board {
-    // .board__container
-    margin: 0 10px;
-    &__container {
+  // .board__container
+  margin: 0 10px;
+  &__container {
+  }
+
+  // .board__body
+
+  &__body {
+    background: url('/img/images/board/bg_1.jpg') center;
+    border: 2px solid rgba($color: #616060, $alpha: 0.6);
+    border-radius: 5%;
+    max-width: 550px;
+    height: 100%;
+    margin: 0 auto;
+    color: #fff;
+    @media (max-width: 553px) {
+      & {
+        max-width: 450px;
+      }
     }
-    
-    // .board__body
-    
-    &__body {
-        background: url('/img/images/board/bg_1.jpg') center;
-        border: 2px solid rgba($color: #616060, $alpha: 0.6);
-        border-radius: 5%;
-        max-width: 550px;
-        height: 100%;
-        margin: 0 auto;
-        color: #fff;
-        @media(max-width: 553px) {
-            &{
-                max-width: 450px;
-            }
-        }
-        @media(max-width: 425px) {
-            &{
-                max-width: 390px;
-            }
-        }
-        @media(max-width: 375px) {
-            &{
-                max-width: 330px;
-            }
-        }
-        @media(max-width: 320px) {
-            &{
-                max-width: 300px;
-            }
-        }
+    @media (max-width: 425px) {
+      & {
+        max-width: 390px;
+      }
     }
-    
-    // .board__row
-    
-    &__row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 10px;
+    @media (max-width: 375px) {
+      & {
+        max-width: 330px;
+      }
+    }
+    @media (max-width: 320px) {
+      & {
+        max-width: 300px;
+      }
+    }
+  }
+
+  // .board__row
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  // .board__item
+
+  &__items {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 100px;
+    flex: 0 1 33.333%;
+    background: rgb(177, 182, 182);
+    background: linear-gradient(
+      49deg,
+      rgba(177, 182, 182, 1) 0%,
+      rgba(16, 16, 20, 1) 100%
+    );
+    max-width: 150px;
+    min-height: 150px;
+    margin: 10px;
+    border-radius: 10%;
+    box-shadow: 1px 1px 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    @media (max-width: 553px) {
+      & {
+        max-width: 120px;
+        min-height: 120px;
+        font-size: 80px;
+      }
     }
 
-    // .board__item
-
-    &__items {
-        font-family: 'Source Code Pro', monospace;
-        font-weight: 600;
-        font-size: 100px;
-        flex: 0 1 33.333%;
-        background: rgb(177,182,182);
-        background: linear-gradient(49deg, rgba(177,182,182,1) 0%, rgba(16,16,20,1) 100%);
-        max-width: 150px;
-        min-height: 150px;
-        margin: 10px;
-        border-radius: 10%;
-        box-shadow: 1px 1px 10px black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        cursor: pointer;
-        @media(max-width: 553px) {
-            &{
-                max-width: 120px;
-                min-height: 120px;
-                font-size: 80px;
-            }
-        }
-
-        @media(max-width: 425px) {
-            &{
-                max-width: 100px;
-                min-height: 100px;
-            }
-        }
-
-        @media(max-width: 375px) {
-            &{
-                max-width: 80px;
-                min-height: 80px;
-                font-size: 60px;
-            }
-        }
-        @media(max-width: 320px) {
-            &{
-                max-width: 70px;
-                min-height: 70px;
-                font-size: 40px;
-            }
-        }
+    @media (max-width: 425px) {
+      & {
+        max-width: 100px;
+        min-height: 100px;
+      }
     }
 
-    &__info {
-        text-align: center;
-        font-size: 45px;
-        font-weight: 600;
-        margin: 10px 0;
-        color: #fff;
+    @media (max-width: 375px) {
+      & {
+        max-width: 80px;
+        min-height: 80px;
+        font-size: 60px;
+      }
     }
+    @media (max-width: 320px) {
+      & {
+        max-width: 70px;
+        min-height: 70px;
+        font-size: 40px;
+      }
+    }
+  }
 
-    &__reset {
-        display: block;
-        text-align: center;
-    }
+  &__info {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #fff;
+  }
 
-    &__reset-button {
-        font-family: 'Libre Franklin', sans-serif;
-        font-size: 34px;
-        font-weight: 700;
-        background-color: #fff;
-        border: 2px solid #000;
-        border-radius: 50px;
-        margin: 0 0 10px 0;
-        padding: 10px;
-        &:hover {
-            background-color: #000;
-            color: #fff;
-        }
-    }
+  &__reset {
+    display: block;
+    text-align: center;
+  }
 
-    &__winner {
-        max-width: 550px;
-        margin: 0 auto;
-        text-align: center;
-        font-family: 'Libre Franklin', sans-serif;
-        font-size: 45px;
-        font-weight: 500;
+  &__reset-button {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    &:hover {
+      background-color: #000;
+      color: #fff;
     }
-    
-    &__winner-content {
-        
-        padding: 10px 0;
-        color: #fff;  
-    }
+  }
+
+  &__winner {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+  }
+
+  &__winner-content {
+    // padding: 10px 0;
+    // color: #fff;
+  }
 }
-
 
 /*----------------Footer-----------------------------------------------*/
 // .footer {
