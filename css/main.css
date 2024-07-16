@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@500&family=Source+Code+Pro:ital,wght@1,600;1,900&family=Libre+Franklin:ital,wght@1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@500&family=Source+Code+Pro:ital,wght@1,600;1,900&family=Libre+Franklin:ital,wght@1,700&display=swap');
 /*Null style*/
 * {
   padding: 0;
@@ -8,23 +8,31 @@
   border: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
   outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none;
 }
 
-nav, footer, header, aside {
+nav,
+footer,
+header,
+aside {
   display: block;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -35,7 +43,9 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
   font-family: inherit;
 }
 
@@ -52,7 +62,8 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -68,7 +79,12 @@ img {
   vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: 400;
 }
@@ -81,8 +97,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /*Body of page*/
 body {
-  font-family: "Lato", sans-serif;
-  background: url("/img/images/board/bg_2.jpg") 0 0/cover fixed;
+  font-family: 'Lato', sans-serif;
+  background: url('../img/images/board/bg_2.jpg') 0 0 / cover fixed;
 }
 
 .wrapper {
@@ -106,7 +122,7 @@ body {
   padding: 10px 0;
 }
 .header__title-content {
-  font-family: "Libre Franklin", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 700;
   font-size: 44px;
   color: #fff;
@@ -116,7 +132,7 @@ body {
   margin: 0 10px;
 }
 .board__body {
-  background: url("/img/images/board/bg_1.jpg") center;
+  background: url('../img/images/board/bg_1.jpg') center;
   border: 2px solid rgba(97, 96, 96, 0.6);
   border-radius: 5%;
   max-width: 550px;
@@ -152,12 +168,16 @@ body {
   padding: 10px;
 }
 .board__items {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   font-weight: 600;
   font-size: 100px;
   flex: 0 1 33.333%;
   background: rgb(177, 182, 182);
-  background: linear-gradient(49deg, rgb(177, 182, 182) 0%, rgb(16, 16, 20) 100%);
+  background: linear-gradient(
+    49deg,
+    rgb(177, 182, 182) 0%,
+    rgb(16, 16, 20) 100%
+  );
   max-width: 150px;
   min-height: 150px;
   margin: 10px;
@@ -208,7 +228,7 @@ body {
   text-align: center;
 }
 .board__reset-button {
-  font-family: "Libre Franklin", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-size: 34px;
   font-weight: 700;
   background-color: #fff;
@@ -225,7 +245,7 @@ body {
   max-width: 550px;
   margin: 0 auto;
   text-align: center;
-  font-family: "Libre Franklin", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-size: 45px;
   font-weight: 500;
 }
