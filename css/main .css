@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@500&family=Source+Code+Pro:ital,wght@1,600;1,900&family=Libre+Franklin:ital,wght@1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@500&family=Source+Code+Pro:ital,wght@1,600;1,900&family=Libre+Franklin:ital,wght@1,700&display=swap");
 /*Null style*/
 * {
   padding: 0;
@@ -8,31 +8,23 @@
   border: 0;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
-:focus,
-:active {
+:focus, :active {
   outline: none;
 }
 
-a:focus,
-a:active {
+a:focus, a:active {
   outline: none;
 }
 
-nav,
-footer,
-header,
-aside {
+nav, footer, header, aside {
   display: block;
 }
 
-html,
-body {
+html, body {
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -43,9 +35,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-input,
-button,
-textarea {
+input, button, textarea {
   font-family: inherit;
 }
 
@@ -62,8 +52,7 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a,
-a:visited {
+a, a:visited {
   text-decoration: none;
 }
 
@@ -79,12 +68,7 @@ img {
   vertical-align: top;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: 400;
 }
@@ -97,13 +81,12 @@ h6 {
 
 /*Body of page*/
 body {
-  font-family: 'Lato', sans-serif;
-  background: url('../img/images/board/bg_2.jpg') 0 0 / cover fixed;
+  font-family: "Lato", sans-serif;
+  background: url("/img/images/board/bg_2.jpg") 0 0/cover fixed;
 }
 
 .wrapper {
   min-height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -115,24 +98,53 @@ body {
 .header__body {
   margin: 10px 0;
 }
+@media (max-width: 424px) {
+  .header__body {
+    margin: 5px 0;
+  }
+}
 .header__title {
   text-align: center;
   margin: 0 auto;
-  max-width: 550px;
   padding: 10px 0;
 }
+@media (max-width: 554px) {
+  .header__title {
+    padding: 2px 0;
+  }
+}
 .header__title-content {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   font-weight: 700;
   font-size: 44px;
   color: #fff;
+}
+@media (max-width: 554px) {
+  .header__title-content {
+    font-size: 30px;
+  }
+}
+@media (max-width: 424px) {
+  .header__title-content {
+    font-size: 25px;
+  }
+}
+@media (max-width: 334px) {
+  .header__title-content {
+    font-size: 20px;
+  }
 }
 /*Сделал шаблон, пока подбираю дизайн*/
 .board {
   margin: 0 10px;
 }
+@media (max-width: 554px) {
+  .board {
+    margin: 0 20px;
+  }
+}
 .board__body {
-  background: url('../img/images/board/bg_1.jpg') center;
+  background: url("/img/images/board/bg_1.jpg") center;
   border: 2px solid rgba(97, 96, 96, 0.6);
   border-radius: 5%;
   max-width: 550px;
@@ -140,24 +152,19 @@ body {
   margin: 0 auto;
   color: #fff;
 }
-@media (max-width: 553px) {
+@media (max-width: 554px) {
   .board__body {
-    max-width: 450px;
+    max-width: 360px;
   }
 }
-@media (max-width: 425px) {
-  .board__body {
-    max-width: 390px;
-  }
-}
-@media (max-width: 375px) {
-  .board__body {
-    max-width: 330px;
-  }
-}
-@media (max-width: 320px) {
+@media (max-width: 424px) {
   .board__body {
     max-width: 300px;
+  }
+}
+@media (max-width: 334px) {
+  .board__body {
+    max-width: 250px;
   }
 }
 .board__row {
@@ -168,16 +175,12 @@ body {
   padding: 10px;
 }
 .board__items {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 600;
-  font-size: 100px;
+  font-size: 150px;
   flex: 0 1 33.333%;
   background: rgb(177, 182, 182);
-  background: linear-gradient(
-    49deg,
-    rgb(177, 182, 182) 0%,
-    rgb(16, 16, 20) 100%
-  );
+  background: linear-gradient(49deg, rgb(177, 182, 182) 0%, rgb(16, 16, 20) 100%);
   max-width: 150px;
   min-height: 150px;
   margin: 10px;
@@ -189,31 +192,27 @@ body {
   text-align: center;
   cursor: pointer;
 }
-@media (max-width: 553px) {
-  .board__items {
-    max-width: 120px;
-    min-height: 120px;
-    font-size: 80px;
-  }
-}
-@media (max-width: 425px) {
+@media (max-width: 554px) {
   .board__items {
     max-width: 100px;
     min-height: 100px;
+    margin: 5px;
+    font-size: 100px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 424px) {
   .board__items {
     max-width: 80px;
     min-height: 80px;
-    font-size: 60px;
+    margin: 5px;
+    font-size: 75px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 334px) {
   .board__items {
-    max-width: 70px;
-    min-height: 70px;
-    font-size: 40px;
+    max-width: 60px;
+    min-height: 60px;
+    font-size: 50px;
   }
 }
 .board__info {
@@ -223,12 +222,28 @@ body {
   margin: 10px 0;
   color: #fff;
 }
+@media (max-width: 554px) {
+  .board__info {
+    font-size: 30px;
+  }
+}
+@media (max-width: 424px) {
+  .board__info {
+    margin: 5px 0;
+    padding: 0 0 5px 0;
+  }
+}
+@media (max-width: 334px) {
+  .board__info {
+    font-size: 20px;
+    padding: 0;
+  }
+}
 .board__reset {
-  display: block;
   text-align: center;
 }
 .board__reset-button {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   font-size: 34px;
   font-weight: 700;
   background-color: #fff;
@@ -241,12 +256,43 @@ body {
   background-color: #000;
   color: #fff;
 }
+@media (max-width: 554px) {
+  .board__reset-button {
+    font-size: 25px;
+  }
+}
+@media (max-width: 334px) {
+  .board__reset-button {
+    font-size: 15px;
+    padding: 5px;
+  }
+}
 .board__winner {
-  max-width: 550px;
   margin: 0 auto;
   text-align: center;
-  font-family: 'Libre Franklin', sans-serif;
+}
+.board__winner-content {
+  font-family: "Libre Franklin", sans-serif;
   font-size: 45px;
   font-weight: 500;
+  color: white;
+  margin: 10px 0;
 }
+@media (max-width: 554px) {
+  .board__winner-content {
+    font-size: 30px;
+    margin: 5px 0;
+  }
+}
+@media (max-width: 424px) {
+  .board__winner-content {
+    font-size: 25px;
+  }
+}
+@media (max-width: 334px) {
+  .board__winner-content {
+    font-size: 20px;
+  }
+}
+
 /*----------------Footer-----------------------------------------------*/

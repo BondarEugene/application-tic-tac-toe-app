@@ -31,12 +31,13 @@ function listenersToElOnBoard() {
 
 function startGame() {
   runGame = true;
+  winner.style.display = 'none';
   cells.forEach((board__items) => (board__items.textContent = ''));
   currentPlayer = players.x;
-  winner.textContent = '';
   boardBody.after(innerInfo);
   innerInfo.textContent = `${currentPlayer}, your move!`;
-  resetButton.remove();
+  boardArray = Array(9).fill('');
+  checkLine();
 }
 
 function clickCell() {
@@ -77,11 +78,13 @@ function checkGameOver() {
       const winnigPlayer = boardArray[line[0]];
 
       winner.textContent = `${winnigPlayer} won ! Well done.`;
+      winner.style.display = 'block';
       return true;
     }
   }
   if (!boardArray.includes('')) {
     winner.textContent = 'Friendship won!';
+    winner.style.display = 'block';
     return true;
   }
 }
@@ -89,13 +92,9 @@ function checkGameOver() {
 function finishGame() {
   runGame = false;
   innerInfo.remove();
-  winner.after(resetButton);
-  winner.style.padding = '10px 0';
-  winner.style.color = 'white';
 }
 
 function restartGame() {
-  boardArray = Array(9).fill('');
   startGame();
 }
 

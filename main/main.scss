@@ -12,11 +12,15 @@
 body {
   font-family: 'Lato', sans-serif;
   background: url('/img/images/board/bg_2.jpg') 0 0 / cover fixed;
+  // @media (max-width: 554px) {
+  //   & {
+  //     overflow: hidden;
+  //   }
+  // }
 }
 //прибиваем footer к низу страницы, запрещаем контенту заходить за пределы экрана
 .wrapper {
   min-height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -45,6 +49,12 @@ body {
 
   &__body {
     margin: 10px 0;
+
+    @media (max-width: 424px) {
+      & {
+        margin: 5px 0;
+      }
+    }
   }
 
   // .header__logo
@@ -62,14 +72,34 @@ body {
   &__title {
     text-align: center;
     margin: 0 auto;
-    max-width: 550px;
+    // max-width: 550px;
     padding: 10px 0;
+    @media (max-width: 554px) {
+      & {
+        padding: 2px 0;
+      }
+    }
   }
   &__title-content {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 700;
     font-size: 44px;
     color: #fff;
+    @media (max-width: 554px) {
+      & {
+        font-size: 30px;
+      }
+    }
+    @media (max-width: 424px) {
+      & {
+        font-size: 25px;
+      }
+    }
+    @media (max-width: 334px) {
+      & {
+        font-size: 20px;
+      }
+    }
   }
 
   // .header__link
@@ -93,6 +123,11 @@ body {
 .board {
   // .board__container
   margin: 0 10px;
+  @media (max-width: 554px) {
+    & {
+      margin: 0 20px;
+    }
+  }
   &__container {
   }
 
@@ -106,24 +141,19 @@ body {
     height: 100%;
     margin: 0 auto;
     color: #fff;
-    @media (max-width: 553px) {
+    @media (max-width: 554px) {
       & {
-        max-width: 450px;
+        max-width: 360px;
       }
     }
-    @media (max-width: 425px) {
-      & {
-        max-width: 390px;
-      }
-    }
-    @media (max-width: 375px) {
-      & {
-        max-width: 330px;
-      }
-    }
-    @media (max-width: 320px) {
+    @media (max-width: 424px) {
       & {
         max-width: 300px;
+      }
+    }
+    @media (max-width: 334px) {
+      & {
+        max-width: 250px;
       }
     }
   }
@@ -143,7 +173,7 @@ body {
   &__items {
     font-family: 'Source Code Pro', monospace;
     font-weight: 600;
-    font-size: 100px;
+    font-size: 150px;
     flex: 0 1 33.333%;
     background: rgb(177, 182, 182);
     background: linear-gradient(
@@ -161,33 +191,27 @@ body {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    @media (max-width: 553px) {
-      & {
-        max-width: 120px;
-        min-height: 120px;
-        font-size: 80px;
-      }
-    }
-
-    @media (max-width: 425px) {
+    @media (max-width: 554px) {
       & {
         max-width: 100px;
         min-height: 100px;
+        margin: 5px;
+        font-size: 100px;
       }
     }
-
-    @media (max-width: 375px) {
+    @media (max-width: 424px) {
       & {
         max-width: 80px;
         min-height: 80px;
-        font-size: 60px;
+        margin: 5px;
+        font-size: 75px;
       }
     }
-    @media (max-width: 320px) {
+    @media (max-width: 334px) {
       & {
-        max-width: 70px;
-        min-height: 70px;
-        font-size: 40px;
+        max-width: 60px;
+        min-height: 60px;
+        font-size: 50px;
       }
     }
   }
@@ -198,11 +222,29 @@ body {
     font-weight: 600;
     margin: 10px 0;
     color: #fff;
+    @media (max-width: 554px) {
+      & {
+        font-size: 30px;
+      }
+    }
+    @media (max-width: 424px) {
+      & {
+        margin: 5px 0;
+        padding: 0 0 5px 0;
+      }
+    }
+    @media (max-width: 334px) {
+      & {
+        font-size: 20px;
+        padding: 0;
+      }
+    }
   }
 
   &__reset {
-    display: block;
+    // display: block;
     text-align: center;
+    // padding: 0 0 10px 0;
   }
 
   &__reset-button {
@@ -218,20 +260,47 @@ body {
       background-color: #000;
       color: #fff;
     }
+    @media (max-width: 554px) {
+      & {
+        font-size: 25px;
+      }
+    }
+
+    @media (max-width: 334px) {
+      & {
+        font-size: 15px;
+        padding: 5px;
+      }
+    }
   }
 
   &__winner {
-    max-width: 550px;
     margin: 0 auto;
     text-align: center;
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 45px;
-    font-weight: 500;
   }
 
   &__winner-content {
-    // padding: 10px 0;
-    // color: #fff;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    color: white;
+    margin: 10px 0;
+    @media (max-width: 554px) {
+      & {
+        font-size: 30px;
+        margin: 5px 0;
+      }
+    }
+    @media (max-width: 424px) {
+      & {
+        font-size: 25px;
+      }
+    }
+    @media (max-width: 334px) {
+      & {
+        font-size: 20px;
+      }
+    }
   }
 }
 
