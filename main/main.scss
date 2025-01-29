@@ -11,7 +11,7 @@
 /*Body of page*/
 body {
   font-family: 'Lato', sans-serif;
-  background: url('/img/images/board/bg_2.jpg') 0 0 / cover fixed;
+  background: url('../img/images/board/bg_2.jpg') 0 0 / cover fixed;
   // @media (max-width: 554px) {
   //   & {
   //     overflow: hidden;
@@ -134,7 +134,7 @@ body {
   // .board__body
 
   &__body {
-    background: url('/img/images/board/bg_1.jpg') center;
+    background: url('../img/images/board/bg_1.jpg') center;
     border: 2px solid rgba($color: #616060, $alpha: 0.6);
     border-radius: 5%;
     max-width: 550px;

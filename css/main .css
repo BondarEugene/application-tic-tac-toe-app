@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 /*Body of page*/
 body {
   font-family: "Lato", sans-serif;
-  background: url("/img/images/board/bg_2.jpg") 0 0/cover fixed;
+  background: url("../img/images/board/bg_2.jpg") 0 0/cover fixed;
 }
 
 .wrapper {
@@ -144,7 +144,7 @@ body {
   }
 }
 .board__body {
-  background: url("/img/images/board/bg_1.jpg") center;
+  background: url("../img/images/board/bg_1.jpg") center;
   border: 2px solid rgba(97, 96, 96, 0.6);
   border-radius: 5%;
   max-width: 550px;
