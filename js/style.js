@@ -37,7 +37,9 @@ function startGame() {
   boardBody.after(innerInfo);
   innerInfo.textContent = `${currentPlayer}, your move!`;
   boardArray = Array(9).fill('');
-  checkLine();
+  // checkLine();
+  winner.after(resetButton);
+  resetButton.textContent = 'New game';
 }
 
 function clickCell() {
@@ -58,8 +60,8 @@ function clickCell() {
 }
 //------------------------
 function checkLine(line) {
-  winner.after(resetButton);
-  resetButton.textContent = 'New game';
+  // winner.after(resetButton);
+  // resetButton.textContent = 'New game';
   const [a, b, c] = line;
 
   const cellA = boardArray[a];
